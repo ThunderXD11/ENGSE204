@@ -8,18 +8,18 @@ public class lab2_3 {
     	
         Scanner scanner = new Scanner(System.in); 
         
-        System.out.print("จำนวนนักเรียนที่ต้องการลงทะเบียน : ");
+        System.out.print("Enter the number of students to register : ");
         int N = scanner.nextInt(); 
         
         scanner.nextLine(); 
 
         for (int i = 0; i < N; i++) {
-            System.out.println("ข้อมูลนักเรียนคนที่ " + (i + 1));
+            System.out.println("--- Student Data " + (i + 1) + " ---");
             
-            System.out.print("รหัสนักศึกษา: ");
+            System.out.print("Student ID: ");
             String inputStudentId = scanner.nextLine(); 
 
-            System.out.print("ชื่อ-นามสกุล: ");
+            System.out.print("Name: ");
             String inputName = scanner.nextLine(); 
 
             new Student2(inputStudentId, inputName);
@@ -27,7 +27,7 @@ public class lab2_3 {
 
         scanner.close(); 
         
-        System.out.println("จำนวนวัตถุ Student ที่ถูกสร้างทั้งหมด: " + Student2.studentCount);
+        System.out.println("\nTotal number of Student objects created: " + Student2.studentCount);
     }
 }
 
