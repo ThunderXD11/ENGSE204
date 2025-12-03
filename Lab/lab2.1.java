@@ -1,15 +1,26 @@
 package lab2;
 
+import java.util.Scanner;
+
 public class lab21 {
 
     public static void main(String[] args) {
-        String inputStudentId = "68543210017-8";
-        String inputName = "Worasit Boonyapreedee";
+    	
+        Scanner scanner = new Scanner(System.in); 
+        
 
-        Student student1 = new Student(inputStudentId, inputName);
+        System.out.print("Enter Student ID: ");
+        String inputStudentId = scanner.nextLine(); 
 
-        System.out.println(student1.getStudentId());
-        System.out.println(student1.getName());
+        System.out.print("Enter Name: ");
+        String inputName = scanner.nextLine(); 
+
+        scanner.close(); 
+                
+        Student student = new Student(inputStudentId, inputName);
+
+        System.out.println(student.getStudentId());
+        System.out.println(student.getName());
     }
 }
 
