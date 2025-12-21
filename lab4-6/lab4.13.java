@@ -22,7 +22,6 @@ class Subscription {
     public Subscription extend(int days) {
         if (days <= 0) return this;
 
-        // จำกัดเฉพาะจำนวนวันที่ต่อครั้งเดียว
         int allowedDays = Math.min(days, maxDuration);
 
         System.out.println("Extension successful.");
