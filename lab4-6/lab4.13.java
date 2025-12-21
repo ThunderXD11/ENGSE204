@@ -9,7 +9,7 @@ class Subscription {
 
     public Subscription(String planName, int durationDays) {
         this.planName = planName;
-        this.durationDays = durationDays; // ❌ ไม่ตัดค่า
+        this.durationDays = durationDays;
     }
 
     public static void setMaxDuration(int max) {
