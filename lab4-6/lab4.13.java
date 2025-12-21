@@ -5,6 +5,7 @@ import java.util.Scanner;
 class Subscription {
     private final String planName;
     private final int durationDays;
+
     private static int maxDuration = 365;
 
     public Subscription(String planName, int durationDays) {
@@ -20,7 +21,9 @@ class Subscription {
     }
 
     public Subscription extend(int days) {
-        if (days <= 0) return this;
+        if (days <= 0) {
+            return this;
+        }
 
         int allowedDays = Math.min(days, maxDuration);
 
@@ -33,7 +36,7 @@ class Subscription {
     }
 }
 
-public class lab4_13 {
+public class Lab4_13 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -51,6 +54,7 @@ public class lab4_13 {
         Subscription sub3 = sub2.extend(extend2);
 
         sub3.displayInfo();
+
         sc.close();
     }
 }
